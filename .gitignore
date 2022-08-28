@@ -1,0 +1,6 @@
+Binaries/*
+Intermediates/*
+*.sln
+*.vcxproj
+*.vcxproj.user
+.vs/*
