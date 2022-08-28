@@ -1,0 +1,3 @@
+[submodule "Vendor/Premake"]
+	path = Vendor/Premake
+	url = https://github.com/AlexandreCaron/Premake5
