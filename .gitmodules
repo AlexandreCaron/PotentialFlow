@@ -1,3 +1,6 @@
 [submodule "Vendor/Premake"]
 	path = Vendor/Premake
 	url = https://github.com/AlexandreCaron/Premake5
+[submodule "Vendor/GoogleTest"]
+	path = Vendor/GoogleTest
+	url = https://github.com/AlexandreCaron/GoogleTest.git

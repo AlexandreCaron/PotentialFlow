@@ -1,8 +1,13 @@
-﻿// PotentialFlow.h : fichier Include pour les fichiers Include système standard,
-// ou les fichiers Include spécifiques aux projets.
+﻿#ifndef POTENTIALFLOW_H
+#define POTENTIALFLOW_H
 
-#pragma once
+#define DllImport __declspec( dllimport )
+#define DllExport __declspec( dllexport )
 
-#include <iostream>
+#ifdef EXPORTING
+#define CLASS_DECLSPEC DllExport
+#else
+#define CLASS_DECLSPEC DllImport
+#endif
 
-// TODO: Référencez ici les en-têtes supplémentaires nécessaires à votre programme.
+#endif

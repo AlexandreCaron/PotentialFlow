@@ -2,8 +2,10 @@
 workspace "PotentialFlow"
    architecture "x64"
    configurations { "Debug", "Release", "Dist" }
-   startproject "PotentialFlow"
+   startproject "PotentialFlowApp"
 
 outputdir = "%{cfg.buildcfg}"
 
+include "PotentialFlowApp"
 include "PotentialFlow"
+include "PotentialFlowUnitTests"

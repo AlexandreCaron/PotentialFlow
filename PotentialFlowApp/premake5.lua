@@ -1,5 +1,5 @@
-project "PotentialFlow"
-   kind "SharedLib"
+project "PotentialFlowApp"
+   kind "ConsoleApp"
    language "C++"
    cppdialect "C++17"
    targetdir "bin/%{cfg.buildcfg}"
@@ -10,20 +10,30 @@ project "PotentialFlow"
    includedirs
    {
       "./include",
+      "../PotentialFlow/include",
       "I:/Libraries/Eigen"
    }
-
+   
+   libdirs 
+   {
+    "../Binaries"
+   }
+   
    links
    {
+     "PotentialFlow"
    }
+   
+   
+
+   
    
    targetdir ("../Binaries")
    objdir ("../Intermediates")
 
    filter "system:windows"
       systemversion "latest"
-      defines { "PLATFORM_WINDOWS",
-                "EXPORTING"}
+      defines { "PLATFORM_WINDOWS"}
 
    filter "configurations:Debug"
       defines { "DEBUG" }
